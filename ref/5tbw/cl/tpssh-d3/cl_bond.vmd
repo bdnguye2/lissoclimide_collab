@@ -377,7 +377,7 @@ mol clipplane color  5 0 top {0.5 0.5 0.5 }
 mol clipplane normal 5 0 top {0.0 0.0 1.0}
 mol clipplane status 5 0 top {0}
 mol rename top partial2.xyz
-set viewpoints([molinfo top]) {{{1 0 0 -0.755011} {0 1 0 4.62424} {0 0 1 -8.9881} {0 0 0 1}} {{0.655668 0.160382 -0.73777 0} {0.336107 -0.936999 0.0950091 0} {-0.676067 -0.310276 -0.668274 0} {0 0 0 1}} {{0.425355 0 0 0} {0 0.425355 0 0} {0 0 0.425355 0} {0 0 0 1}} {{1 0 0 -0.58} {0 1 0 0.61} {0 0 1 0} {0 0 0 1}}}
+set viewpoints([molinfo top]) {{{1 0 0 -0.755011} {0 1 0 4.62424} {0 0 1 -8.9881} {0 0 0 1}} {{0.65082 0.198758 -0.732702 0} {0.370978 -0.925292 0.0785174 0} {-0.662374 -0.322929 -0.675946 0} {0 0 0 1}} {{0.425185 0 0 0} {0 0.425185 0 0} {0 0 0.425185 0} {0 0 0 1}} {{1 0 0 -0.58} {0 1 0 0.61} {0 0 1 0} {0 0 0 1}}}
 lappend viewplist [molinfo top]
 set topmol [molinfo top]
 # done with molecule 0
@@ -524,10 +524,12 @@ color scale colors WBlk {1.0 1.0 1.0} {0.5 0.5 0.5} {0.0 0.0 0.0}
     {color Segname {} blue}
     {color Conformation {all} blue}
     {color Molecule {0} blue}
+    {color Molecule {partial2.xyz} blue}
     {color Structure {3_10_Helix} blue}
     {color Surface {Grasp} gray}
     {color Labels {Atoms} gray}
     {color Labels {Bonds} orange}
+    {color Labels {Angles} orange}
     {color Labels {Springs} orange}
     {color Stage {Even} gray}
     {color Stage {Odd} silver}
@@ -568,22 +570,22 @@ color scale colors WBlk {1.0 1.0 1.0} {0.5 0.5 0.5} {0.0 0.0 0.0}
 vmdrestoremycolors
 label textsize 1.545454502105713
 label add Atoms 0/62
-label textoffset Atoms 0 {0.17692308127880096 0.016483517363667488}
-label textformat Atoms 0 %R%d:%a
+label textoffset Atoms 0 {-0.2846153974533081 -0.06043956056237221}
+label textformat Atoms 0 %a
 label add Atoms 0/35
-label textoffset Atoms 1 {-0.2538461685180664 -0.005494505632668734}
-label textformat Atoms 1 %R%d:%a
+label add Atoms 0/35
+label textoffset Atoms 1 {-0.19230769574642181 0.016483517363667488}
+label textformat Atoms 1 %a
+label add Atoms 0/19
 label add Atoms 0/19
 label textoffset Atoms 2 {0.05384615436196327 0.12637363374233246}
-label textformat Atoms 2 %R%d:%a
-label add Atoms 0/12
-label add Atoms 0/12
-label textoffset Atoms 3 {-0.08461538702249527 -0.18131868541240692}
-label textformat Atoms 3 %R%d:%a
+label textformat Atoms 2 %a
 label add Atoms 0/18
-label add Atoms 0/18
-label textoffset Atoms 4 {0.0 0.0}
-label textformat Atoms 4 %R%d:%a
+label textoffset Atoms 3 {0.699999988079071 0.12637363374233246}
+label textformat Atoms 3 Guanine-6170
+label add Atoms 0/42
+label textoffset Atoms 4 {-0.699999988079071 -0.13736264407634735}
+label textformat Atoms 4 Guanine-6169
 label add Bonds 0/35 0/62
 label textoffset Bonds 0 {-0.03846153989434242 -0.049450550228357315}
 label add Bonds 0/19 0/62
@@ -594,3 +596,5 @@ label textoffset Bonds 2 {0.0 0.0}
 label add Bonds 0/18 0/62
 label add Bonds 0/18 0/62
 label textoffset Bonds 3 {0.0 0.0}
+label add Angles 0/19 0/62 0/35
+label textoffset Angles 0 {-0.08461538702249527 -0.005494505632668734}
