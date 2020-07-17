@@ -377,10 +377,91 @@ mol clipplane color  5 0 top {0.5 0.5 0.5 }
 mol clipplane normal 5 0 top {0.0 0.0 1.0}
 mol clipplane status 5 0 top {0}
 mol rename top partial2.xyz
-set viewpoints([molinfo top]) {{{1 0 0 -0.755011} {0 1 0 4.62424} {0 0 1 -8.9881} {0 0 0 1}} {{-0.328998 -0.916422 -0.22782 0} {-0.812734 0.151947 0.562462 0} {-0.480841 0.370205 -0.7948 0} {0 0 0 1}} {{0.171146 0 0 0} {0 0.171146 0 0} {0 0 0.171146 0} {0 0 0 1}} {{1 0 0 0.15} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
+molinfo top set drawn 0
+set viewpoints([molinfo top]) {{{1 0 0 1.66877} {0 1 0 6.38808} {0 0 1 -8.27255} {0 0 0 1}} {{0.95473 0.29248 0.0543348 0} {0.255434 -0.899598 0.354242 0} {0.152493 -0.324323 -0.93358 0} {0 0 0 1}} {{0.249551 0 0 0} {0 0.249551 0 0} {0 0 0.249551 0} {0 0 0 1}} {{1 0 0 -0.69} {0 1 0 0.22} {0 0 1 0} {0 0 0 1}}}
+lappend viewplist [molinfo top]
+# done with molecule 0
+mol new /home/bdnguye2/UCI_PhD/furche/projects/ni_halo/ref/5tbw/cl/tpssh-d3/partial2a.xyz type xyz first 0 last -1 step 1 filebonds 1 autobonds 1 waitfor all
+mol delrep 0 top
+mol representation Licorice 0.300000 12.000000 12.000000
+mol color Element
+mol selection {noh}
+mol material Transparent
+mol addrep top
+mol selupdate 0 top 0
+mol colupdate 0 top 0
+mol scaleminmax top 0 0.000000 0.000000
+mol smoothrep top 0 0
+mol drawframes top 0 {now}
+mol clipplane center 0 0 top {0.0 0.0 0.0}
+mol clipplane color  0 0 top {0.5 0.5 0.5 }
+mol clipplane normal 0 0 top {0.0 0.0 1.0}
+mol clipplane status 0 0 top {0}
+mol clipplane center 1 0 top {0.0 0.0 0.0}
+mol clipplane color  1 0 top {0.5 0.5 0.5 }
+mol clipplane normal 1 0 top {0.0 0.0 1.0}
+mol clipplane status 1 0 top {0}
+mol clipplane center 2 0 top {0.0 0.0 0.0}
+mol clipplane color  2 0 top {0.5 0.5 0.5 }
+mol clipplane normal 2 0 top {0.0 0.0 1.0}
+mol clipplane status 2 0 top {0}
+mol clipplane center 3 0 top {0.0 0.0 0.0}
+mol clipplane color  3 0 top {0.5 0.5 0.5 }
+mol clipplane normal 3 0 top {0.0 0.0 1.0}
+mol clipplane status 3 0 top {0}
+mol clipplane center 4 0 top {0.0 0.0 0.0}
+mol clipplane color  4 0 top {0.5 0.5 0.5 }
+mol clipplane normal 4 0 top {0.0 0.0 1.0}
+mol clipplane status 4 0 top {0}
+mol clipplane center 5 0 top {0.0 0.0 0.0}
+mol clipplane color  5 0 top {0.5 0.5 0.5 }
+mol clipplane normal 5 0 top {0.0 0.0 1.0}
+mol clipplane status 5 0 top {0}
+mol rename top partial2a.xyz
+set viewpoints([molinfo top]) {{{1 0 0 1.66877} {0 1 0 6.38808} {0 0 1 -8.27255} {0 0 0 1}} {{0.95473 0.29248 0.0543348 0} {0.255434 -0.899598 0.354242 0} {0.152493 -0.324323 -0.93358 0} {0 0 0 1}} {{0.249551 0 0 0} {0 0.249551 0 0} {0 0 0.249551 0} {0 0 0 1}} {{1 0 0 -0.69} {0 1 0 0.22} {0 0 1 0} {0 0 0 1}}}
+lappend viewplist [molinfo top]
+# done with molecule 1
+mol new /home/bdnguye2/UCI_PhD/furche/projects/ni_halo/ref/5tbw/cl/tpssh-d3/partial2b.xyz type xyz first 0 last -1 step 1 filebonds 1 autobonds 1 waitfor all
+mol delrep 0 top
+mol representation Licorice 0.300000 12.000000 12.000000
+mol color Element
+mol selection {noh}
+mol material EdgyShiny
+mol addrep top
+mol selupdate 0 top 0
+mol colupdate 0 top 0
+mol scaleminmax top 0 0.000000 0.000000
+mol smoothrep top 0 0
+mol drawframes top 0 {now}
+mol clipplane center 0 0 top {0.0 0.0 0.0}
+mol clipplane color  0 0 top {0.5 0.5 0.5 }
+mol clipplane normal 0 0 top {0.0 0.0 1.0}
+mol clipplane status 0 0 top {0}
+mol clipplane center 1 0 top {0.0 0.0 0.0}
+mol clipplane color  1 0 top {0.5 0.5 0.5 }
+mol clipplane normal 1 0 top {0.0 0.0 1.0}
+mol clipplane status 1 0 top {0}
+mol clipplane center 2 0 top {0.0 0.0 0.0}
+mol clipplane color  2 0 top {0.5 0.5 0.5 }
+mol clipplane normal 2 0 top {0.0 0.0 1.0}
+mol clipplane status 2 0 top {0}
+mol clipplane center 3 0 top {0.0 0.0 0.0}
+mol clipplane color  3 0 top {0.5 0.5 0.5 }
+mol clipplane normal 3 0 top {0.0 0.0 1.0}
+mol clipplane status 3 0 top {0}
+mol clipplane center 4 0 top {0.0 0.0 0.0}
+mol clipplane color  4 0 top {0.5 0.5 0.5 }
+mol clipplane normal 4 0 top {0.0 0.0 1.0}
+mol clipplane status 4 0 top {0}
+mol clipplane center 5 0 top {0.0 0.0 0.0}
+mol clipplane color  5 0 top {0.5 0.5 0.5 }
+mol clipplane normal 5 0 top {0.0 0.0 1.0}
+mol clipplane status 5 0 top {0}
+mol rename top partial2b.xyz
+set viewpoints([molinfo top]) {{{1 0 0 1.66877} {0 1 0 6.38808} {0 0 1 -8.27255} {0 0 0 1}} {{0.95473 0.29248 0.0543348 0} {0.255434 -0.899598 0.354242 0} {0.152493 -0.324323 -0.93358 0} {0 0 0 1}} {{0.249551 0 0 0} {0 0.249551 0 0} {0 0 0.249551 0} {0 0 0 1}} {{1 0 0 -0.69} {0 1 0 0.22} {0 0 1 0} {0 0 0 1}}}
 lappend viewplist [molinfo top]
 set topmol [molinfo top]
-# done with molecule 0
+# done with molecule 2
 foreach v $viewplist {
   molinfo $v set {center_matrix rotate_matrix scale_matrix global_matrix} $viewpoints($v)
 }
@@ -480,6 +561,7 @@ color scale colors WBlk {1.0 1.0 1.0} {0.5 0.5 0.5} {0.0 0.0 0.0}
     {color Element {No} ochre}
     {color Element {Np} ochre}
     {color Element {Os} ochre}
+    {color Element {P} orange3}
     {color Element {Pa} ochre}
     {color Element {Pb} ochre}
     {color Element {Pd} ochre}
@@ -524,8 +606,15 @@ color scale colors WBlk {1.0 1.0 1.0} {0.5 0.5 0.5} {0.0 0.0 0.0}
     {color Segname {} blue}
     {color Conformation {all} blue}
     {color Molecule {0} blue}
+    {color Molecule {partial2.xyz} blue}
+    {color Molecule {1} gray}
+    {color Molecule {partial2a.xyz} red}
+    {color Molecule {2} orange}
+    {color Molecule {partial2b.xyz} gray}
     {color Structure {3_10_Helix} blue}
     {color Surface {Grasp} gray}
+    {color Labels {Atoms} gray}
+    {color Labels {Bonds} orange3}
     {color Labels {Springs} orange}
     {color Stage {Even} gray}
     {color Stage {Odd} silver}
@@ -564,4 +653,23 @@ color scale colors WBlk {1.0 1.0 1.0} {0.5 0.5 0.5} {0.0 0.0 0.0}
   color change rgb 32 0.9599999785423279 0.7200000286102295 0.0
 }
 vmdrestoremycolors
-label textsize 1.0
+label textsize 1.6666666269302368
+label add Atoms 2/19
+label textoffset Atoms 0 {-0.10000000149011612 -0.06043956056237221}
+label textformat Atoms 0 %a
+label add Atoms 1/35
+label textoffset Atoms 1 {0.007692307699471712 0.03846153989434242}
+label textformat Atoms 1 %a
+label add Atoms 1/19
+label textoffset Atoms 2 {-0.023076923564076424 -0.03846153989434242}
+label textformat Atoms 2 %a
+label add Atoms 1/34
+label textoffset Atoms 3 {-0.03846153989434242 0.40109890699386597}
+label textformat Atoms 3 Guanine-6169
+label add Atoms 1/14
+label textoffset Atoms 4 {0.39230769872665405 0.08241758495569229}
+label textformat Atoms 4 Guanine-6170
+label add Bonds 2/19 1/35
+label textoffset Bonds 0 {-0.007692307699471712 -0.02747252769768238}
+label add Bonds 1/19 2/19
+label textoffset Bonds 1 {-0.007692307699471712 -0.016483517363667488}

@@ -378,7 +378,7 @@ mol clipplane normal 5 0 top {0.0 0.0 1.0}
 mol clipplane status 5 0 top {0}
 mol rename top coord.xyz
 molinfo top set drawn 0
-set viewpoints([molinfo top]) {{{1 0 0 -200.755} {0 1 0 -45.3758} {0 0 1 -188.988} {0 0 0 1}} {{-0.421714 -0.860407 -0.285598 0} {-0.758958 0.162787 0.630292 0} {-0.495874 0.48259 -0.721698 0} {0 0 0 1}} {{0.155195 0 0 0} {0 0.155195 0 0} {0 0 0.155195 0} {0 0 0 1}} {{1 0 0 0.1} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
+set viewpoints([molinfo top]) {{{1 0 0 -200.755} {0 1 0 -45.3758} {0 0 1 -188.988} {0 0 0 1}} {{-0.324341 -0.930236 -0.170764 0} {-0.873723 0.225582 0.430714 0} {-0.362168 0.288894 -0.886004 0} {0 0 0 1}} {{0.186085 0 0 0} {0 0.186085 0 0} {0 0 0.186085 0} {0 0 0 1}} {{1 0 0 0.1} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
 lappend viewplist [molinfo top]
 # done with molecule 0
 mol new /home/bdnguye2/UCI_PhD/furche/projects/ni_halo/ref/5tbw/cl/tpssh-d3/opt.xyz type xyz first 0 last -1 step 1 filebonds 1 autobonds 1 waitfor all
@@ -386,7 +386,7 @@ mol delrep 0 top
 mol representation Licorice 0.300000 12.000000 12.000000
 mol color Element
 mol selection {all}
-mol material EdgyShiny
+mol material Opaque
 mol addrep top
 mol selupdate 0 top 0
 mol colupdate 0 top 0
@@ -418,7 +418,7 @@ mol clipplane color  5 0 top {0.5 0.5 0.5 }
 mol clipplane normal 5 0 top {0.0 0.0 1.0}
 mol clipplane status 5 0 top {0}
 mol rename top opt.xyz
-set viewpoints([molinfo top]) {{{1 0 0 -200.755} {0 1 0 -45.3758} {0 0 1 -188.988} {0 0 0 1}} {{-0.421714 -0.860407 -0.285598 0} {-0.758958 0.162787 0.630292 0} {-0.495874 0.48259 -0.721698 0} {0 0 0 1}} {{0.155195 0 0 0} {0 0.155195 0 0} {0 0 0.155195 0} {0 0 0 1}} {{1 0 0 0.1} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
+set viewpoints([molinfo top]) {{{1 0 0 -200.755} {0 1 0 -45.3758} {0 0 1 -188.988} {0 0 0 1}} {{-0.324341 -0.930236 -0.170764 0} {-0.873723 0.225582 0.430714 0} {-0.362168 0.288894 -0.886004 0} {0 0 0 1}} {{0.186085 0 0 0} {0 0.186085 0 0} {0 0 0.186085 0} {0 0 0 1}} {{1 0 0 0.1} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
 lappend viewplist [molinfo top]
 # done with molecule 1
 mol new /home/bdnguye2/UCI_PhD/furche/projects/ni_halo/ref/5tbw/cl/cl.xyz type xyz first 0 last -1 step 1 filebonds 1 autobonds 1 waitfor all
@@ -426,7 +426,7 @@ mol delrep 0 top
 mol representation Licorice 0.300000 12.000000 12.000000
 mol color ColorID 1
 mol selection {all}
-mol material EdgyShiny
+mol material EdgyGlass
 mol addrep top
 mol selupdate 0 top 0
 mol colupdate 0 top 0
@@ -458,7 +458,7 @@ mol clipplane color  5 0 top {0.5 0.5 0.5 }
 mol clipplane normal 5 0 top {0.0 0.0 1.0}
 mol clipplane status 5 0 top {0}
 mol rename top cl.xyz
-set viewpoints([molinfo top]) {{{1 0 0 -200.755} {0 1 0 -45.3758} {0 0 1 -188.988} {0 0 0 1}} {{-0.421714 -0.860407 -0.285598 0} {-0.758958 0.162787 0.630292 0} {-0.495874 0.48259 -0.721698 0} {0 0 0 1}} {{0.155195 0 0 0} {0 0.155195 0 0} {0 0 0.155195 0} {0 0 0 1}} {{1 0 0 0.1} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
+set viewpoints([molinfo top]) {{{1 0 0 -200.755} {0 1 0 -45.3758} {0 0 1 -188.988} {0 0 0 1}} {{-0.324341 -0.930236 -0.170764 0} {-0.873723 0.225582 0.430714 0} {-0.362168 0.288894 -0.886004 0} {0 0 0 1}} {{0.186085 0 0 0} {0 0.186085 0 0} {0 0 0.186085 0} {0 0 0 1}} {{1 0 0 0.1} {0 1 0 0} {0 0 1 0} {0 0 0 1}}}
 lappend viewplist [molinfo top]
 set topmol [molinfo top]
 # done with molecule 2
@@ -561,6 +561,7 @@ color scale colors WBlk {1.0 1.0 1.0} {0.5 0.5 0.5} {0.0 0.0 0.0}
     {color Element {No} ochre}
     {color Element {Np} ochre}
     {color Element {Os} ochre}
+    {color Element {P} orange3}
     {color Element {Pa} ochre}
     {color Element {Pb} ochre}
     {color Element {Pd} ochre}
@@ -605,8 +606,11 @@ color scale colors WBlk {1.0 1.0 1.0} {0.5 0.5 0.5} {0.0 0.0 0.0}
     {color Segname {} blue}
     {color Conformation {all} blue}
     {color Molecule {0} blue}
+    {color Molecule {coord.xyz} blue}
     {color Molecule {1} red}
+    {color Molecule {opt.xyz} red}
     {color Molecule {2} gray}
+    {color Molecule {cl.xyz} gray}
     {color Structure {3_10_Helix} blue}
     {color Surface {Grasp} gray}
     {color Labels {Springs} orange}
