@@ -1,4 +1,4 @@
-OA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Preamble
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[11pt]{article}
@@ -17,7 +17,7 @@ OA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{braket}
 %
 % Graphics, floats, tables
-\usepackage{graphicx, color, float, array}
+\usepackage{graphicx, xcolor, float, array}
 %
 % Hyperlinks
 \usepackage{hyperref}
@@ -37,6 +37,8 @@ OA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Math mode version of "r" column type (requires array package)
 \newcolumntype{R}{>{$}r<{$}}
 %
+%comments
+\newcommand{\brian}[1]{{\color{orange} #1}}
 % Title, authors, date
 \title{\textbf{Is TPSS an TPSSh better for TPAA calculations?}}
 \author{Thanh Huynh and Brian Nguyen}
@@ -54,6 +56,8 @@ OA%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
 
+\brian{Mention big picture -> lissoclimide project; follow-up to the
+  previous report}
 The TPSS and TPSSh functionals may describe the halogen-pi bond more
 accurately than PBE. To investigate which functional performs better,
 the X40 test set serves as a benchmark for TPSS, TPSSh, and PBE 
@@ -62,16 +66,32 @@ calculations.
 
 \section{Methods}
 
+\brian{Most of calculations are based on the previous report. The 3-4
+  extrapolation of the RIRPA correlation energy was good balance between
+  efficiency and accuracy...}
 The X40 Test Set was used the benchmark the method's accuracy for 
-noncovalent interactions involving halogens. Calculations were computed
+noncovalent interactions involving halogens \brian{remind your reader
+  of the x40 test set - descriptions: type of interactions, and how
+  many complexes}. Calculations were computed
 with basis sets def2-QZVP, cc-pVTZ, and cc-pVQZ. The RPA energies were
-computed based on converged orbitals from TPSS and TPSSh and resolution of identity (RI) was included to improve efficiency. 
+computed based on converged orbitals from TPSS and TPSSh and resolution
+of identity (RI) was included to improve efficiency. 
 
-Eight complexes were chosen to study basis set convergences based on
-error from a previous report.   
+\brian{For the sake of time,} a set of eight complexes from X40 test set
+was chosen to study basis set convergences based on error from a previous
+report. 
 
 \section{Results}
 
+\brian{Adding figures - lookup how to add figures}
+
+\begin{figure}
+  \includegraphics[scale=0.5]{<png file>}
+  \caption{This is a figure.}
+  \label{fig:<name>}
+\end{figure}
+
+\brian{yada yada see Fig. \ref{fig:<name>}}
 This section states the main new results of the current
 reporting period. These results could be presented, e.g., in the form of
 equations, figures, tables, and text. Negative results are just as
@@ -97,14 +117,6 @@ second paragraph of the introduction?
 A second paragraph should discuss any conclusions for your future work. 
 Is there a need to change your approach or your priorities? What remains
 to be done to reach the goals stated in the first section? 
-
-\section{Service}
-
-This section should summarize group service activities you have engaged
-in during the reporting period, including, e.g., related to shared
-governance (deputy positions), work for the high school outreach
-program, helping or supervising other group members to larger extent
-than usual.
 
 \printbibliography
 
