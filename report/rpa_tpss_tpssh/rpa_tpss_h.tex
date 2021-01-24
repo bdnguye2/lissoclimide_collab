@@ -97,9 +97,22 @@ report.
 \end{figure}
 
 \begin{figure}[hbpt]
-  \includegraphics[scale=0.5]{tpss_1.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
+  \centering
+  \begin{subfigure}{\textwidth}
+    \center
+    \includegraphics[scale=0.45]{tpss_1.png}
+    \caption{RPA(TPSS)}
+    \label{fig:tpss_1}
+  \end{subfigure}
+  \begin{subfigure}{\textwidth}
+    \center
+    \includegraphics[scale=0.45]{tpssh_1.png}
+    \caption{RPA(TPSSh)}
+    \label{fig:tpssh_1}
+  \end{subfigure}
+  \caption{Basis sets convergence plot for RPA(TPSS)
+    and RPA(TPSSh) is presented for complex 1.}
+  \label{fig:complex_1}
 \end{figure}
 
 \begin{figure}[hbpt]
@@ -150,13 +163,6 @@ report.
   \caption{This is a figure.}
   \label{fig:<name>}
 \end{figure}
-
-\begin{figure}
-  \includegraphics[scale=0.5]{tpssh_1.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
-\end{figure}
-
 
 \begin{figure}
   \includegraphics[scale=0.5]{tpssh_11.png}
