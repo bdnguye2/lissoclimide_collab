@@ -18,6 +18,7 @@
 %
 % Graphics, floats, tables
 \usepackage{graphicx, xcolor, float, array}
+\usepackage{subcaption}
 %
 % Hyperlinks
 \usepackage{hyperref}
@@ -101,10 +102,23 @@ report.
   \label{fig:<name>}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[scale=0.5]{tpss_8.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
+\begin{figure}[hbpt]
+  \centering
+  \begin{subfigure}{\textwidth}
+    \center
+    \includegraphics[scale=0.45]{tpss_8.png}
+    \caption{RPA(TPSS)}
+    \label{fig:tpss_8}
+  \end{subfigure}
+  \begin{subfigure}{\textwidth}
+    \center
+    \includegraphics[scale=0.45]{tpssh_8.png}
+    \caption{This is a figure.}
+    \label{fig:tpssh_8}
+  \end{subfigure}
+  \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
+    presented for complex 8.}
+  \label{fig:complex_8}
 \end{figure}
 
 \begin{figure}
@@ -143,11 +157,6 @@ report.
   \label{fig:<name>}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[scale=0.5]{tpssh_8.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
-\end{figure}
 
 \begin{figure}
   \includegraphics[scale=0.5]{tpssh_11.png}
