@@ -59,6 +59,11 @@
 
 \brian{Mention big picture -> lissoclimide project; follow-up to the
   previous report}
+
+A potent cytotoxic chemical, called chlorolissoclimide, was found in the
+sea squirt and could potentially be useful in cancer therapeutics or
+other medication.
+
 The TPSS and TPSSh functionals may describe the halogen-pi bond more
 accurately than PBE. To investigate which functional performs better,
 the X40 test set serves as a benchmark for TPSS, TPSSh, and PBE 
@@ -67,46 +72,47 @@ calculations.
 
 \section{Methods}
 
-\brian{Most of calculations are based on the previous report. The 3-4
-  extrapolation of the RIRPA correlation energy was good balance between
-  efficiency and accuracy...}
-The X40 Test Set was used the benchmark the method's accuracy for 
-noncovalent interactions involving halogens \brian{remind your reader
-  of the x40 test set - descriptions: type of interactions, and how
-  many complexes}. Calculations were computed
-with basis sets def2-QZVP, cc-pVTZ, and cc-pVQZ. The RPA energies were
-computed based on converged orbitals from TPSS and TPSSh and resolution
-of identity (RI) was included to improve efficiency. 
+Based on the previous report, the 3-4 extrapolation of the RIRPA
+correlation energy was a good balance between efficiency and accuracy.
+The X40 Test Set was used to benchmark the method's accuracy for 
+noncovalent interactions involving halogens. The test set contains 40
+complexes with despersion, induction, dipole-dipole, stack, hydrogen
+bond,halogen bond, and halogen-pi bond interations.
 
-\brian{For the sake of time,} a set of eight complexes from X40 test set
-was chosen to study basis set convergences based on error from a previous
-report. 
+\brian{remind your reader of the x40 test set - descriptions: type of
+  interactions, and how many complexes}.
+
+To conserve time, a set of eight complexes from the X40 test set were
+chosen based on error from the previous report to study basis set
+convergences. Calculations were computed with basis sets def2-QZVP,
+cc-pVTZ, and cc-pVQZ. The RPA energies were computed based on converged
+orbitals from TPSS and TPSSh and resolution of identity (RI) was included
+to improve efficiency. 
 
 \section{Results}
 
-\brian{Adding figures - lookup how to add figures; see Fig. \ref{fig:rpa_basis}
-  as good example}
+\brian{Adding figures - lookup how to add figures; see Fig.\ref{fig:rpa_basis} as good example}
 
 \begin{figure}[hbpt]
   \centering
-  \includegraphics[scale=0.25]{def2-QZVP_error.png}
+  \includegraphics[scale=0.25]{def2-QZVP.png}
   \caption{The binding energy errors (kcal/mol) for X40 test set computed
-    for PBE, PBE-D3, PBE-D4, RPA(PBE), and def2-QZVP. All methods were 50
-    CP corrected and negative sign indicates overbinding.}
+    for RPA(PBE) methods with basis functions def2-QZVP, cc-pVTZ, and
+    cc-pVQZ. Negative sign indicates overbinding.}
   \label{fig:rpa_basis}
 \end{figure}
 
 \begin{figure}[hbpt]
   \centering
-  \begin{subfigure}{\textwidth}
-    \center
-    \includegraphics[scale=0.45]{tpss_1.png}
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[scale=0.3]{tpss_1.png}
     \caption{RPA(TPSS)}
     \label{fig:tpss_1}
-  \end{subfigure}
-  \begin{subfigure}{\textwidth}
-    \center
-    \includegraphics[scale=0.45]{tpssh_1.png}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[scale=0.3]{tpssh_1.png}
     \caption{RPA(TPSSh)}
     \label{fig:tpssh_1}
   \end{subfigure}
@@ -117,16 +123,16 @@ report.
 
 \begin{figure}[hbpt]
   \centering
-  \begin{subfigure}{\textwidth}
+  \begin{subfigure}{.5\textwidth}
     \center
-    \includegraphics[scale=0.45]{tpss_8.png}
+    \includegraphics[scale=0.3]{tpss_8.png}
     \caption{RPA(TPSS)}
     \label{fig:tpss_8}
-  \end{subfigure}
-  \begin{subfigure}{\textwidth}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
     \center
-    \includegraphics[scale=0.45]{tpssh_8.png}
-    \caption{This is a figure.}
+    \includegraphics[scale=0.3]{tpssh_8.png}
+    \caption{RPA(TPSSh)}
     \label{fig:tpssh_8}
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
@@ -134,65 +140,101 @@ report.
   \label{fig:complex_8}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[scale=0.5]{tpss_11.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
+\begin{figure}[hbpt]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpss_11.png}
+    \caption{RPA(TPSS)}
+    \label{fig:tpss11}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpssh_11.png}
+    \caption{RPA(TPSSh)}
+    \label{fig:tpssh_11}
+  \end{subfigure}
+  \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
+    presented for complex 11.}
+  \label{fig:complex_11}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[scale=0.5]{tpss_24.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
+\begin{figure}[hbpt]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpss_24.png}
+    \caption{RPA(TPSS)}
+    \label{fig:tpss_24}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpssh_24.png}
+    \caption{RPA(TPSSh)}
+    \label{fig:tpssh_24}
+  \end{subfigure}
+  \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
+    presented for complex 24.}
+  \label{fig:complex_24}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[scale=0.5]{tpss_27.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
+\begin{figure}[hbpt]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpss_27.png}
+    \caption{RPA(TPSS)}
+    \label{fig:tpss_27}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpssh_27.png}
+    \caption{RPA(TPSSh)}
+    \label{fig:tpssh_27}
+  \end{subfigure}
+  \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
+    presented for complex 27.}
+  \label{fig:complex_27}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[scale=0.5]{tpss_30.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
+\begin{figure}[hbpt]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpss_30.png}
+    \caption{RPA(TPSS)}
+    \label{fig:tpss_30}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpssh_30.png}
+    \caption{RPA(TPSSh)}
+    \label{fig:tpssh_30}
+  \end{subfigure}
+  \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
+    presented for complex 30.}
+  \label{fig:complex_30}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[scale=0.5]{tpss_38.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
+\begin{figure}[hbpt]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpss_38.png}
+    \caption{RPA(TPSS)}
+    \label{fig:tpss_38}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \center
+    \includegraphics[scale=0.3]{tpssh_38.png}
+    \caption{RPA(TPSSh)}
+    \label{fig:tpssh_38}
+  \end{subfigure}
+  \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
+    presented for complex 38.}
+  \label{fig:complex_38}
 \end{figure}
 
-\begin{figure}
-  \includegraphics[scale=0.5]{tpssh_11.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[scale=0.5]{tpssh_24.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[scale=0.5]{tpssh_27.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[scale=0.5]{tpssh_30.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[scale=0.5]{tpssh_38.png}
-  \caption{This is a figure.}
-  \label{fig:<name>}
-\end{figure}
 
 
 \brian{yada yada see Fig. \ref{fig:<name>}}
