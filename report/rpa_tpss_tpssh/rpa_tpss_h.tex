@@ -60,14 +60,19 @@
 \brian{Mention big picture -> lissoclimide project; follow-up to the
   previous report}
 
-A potent cytotoxic chemical, called chlorolissoclimide, was found in the
-sea squirt and could potentially be useful in cancer therapeutics or
-other medication.
+A potent cytotoxin, called chlorolissoclimide, was discovered
+in the sea squirt and could potentially be useful in cancer therapeutics
+or other medication. This chemical induces cell death by obstructing
+production of proteins. An interesting ribosome-drug interaction was
+revealed to form a halogen-pi bond however, characteristics of the bond
+are still unknown. Researching this specific interaction could help with
+creating new cancer therapeutics or improving medication.
 
-The TPSS and TPSSh functionals may describe the halogen-pi bond more
-accurately than PBE. To investigate which functional performs better,
-the X40 test set serves as a benchmark for TPSS, TPSSh, and PBE 
-calculations.  
+Following up the previous report, random phase approximation (RPA) was
+chosen to be used with different functionals. The TPSS and TPSSh
+functionals may describe the halogen-pi bond more accurately than PBE.
+To investigate which functional performs better, the X40 test set serves
+as a benchmark for TPSS, TPSSh, and PBE calculations.  
 
 
 \section{Methods}
@@ -77,161 +82,175 @@ correlation energy was a good balance between efficiency and accuracy.
 The X40 Test Set was used to benchmark the method's accuracy for 
 noncovalent interactions involving halogens. The test set contains 40
 complexes with despersion, induction, dipole-dipole, stack, hydrogen
-bond,halogen bond, and halogen-pi bond interations.
-
-\brian{remind your reader of the x40 test set - descriptions: type of
-  interactions, and how many complexes}.
+bond, halogen bond, and halogen-pi bond interations.
 
 To conserve time, a set of eight complexes from the X40 test set were
 chosen based on error from the previous report to study basis set
 convergences. Calculations were computed with basis sets def2-QZVP,
 cc-pVTZ, and cc-pVQZ. The RPA energies were computed based on converged
 orbitals from TPSS and TPSSh and resolution of identity (RI) was included
-to improve efficiency. 
+to improve efficiency. The Hartree Exact Exchange (HXX) total energy and
+RIRPA correlation energy were recorded from the supermolecule and monomers
+of each complex to compute interaction energies. The interaction energies
+from the selected complexes were extrapolated...
 
 \section{Results}
 
-\brian{Adding figures - lookup how to add figures; see Fig.\ref{fig:rpa_basis} as good example}
-
 \begin{figure}[hbpt]
   \centering
-  \includegraphics[scale=0.25]{def2-QZVP.png}
+  \begin{subfigure}{\textwidth}
+    \center
+    \includegraphics[scale=0.35]{def2-QZVP_1.png}
+    \label{fig:def2-QZVP_1}
+  \end{subfigure}
+  \begin{subfigure}{\textwidth}
+    \center
+    \includegraphics[scale=0.35]{def2-QZVP_2.png}
+    \label{fig:def2-QZVP_2}
+  \end{subfigure}
   \caption{The binding energy errors (kcal/mol) for X40 test set computed
     for RPA(PBE) methods with basis functions def2-QZVP, cc-pVTZ, and
     cc-pVQZ. Negative sign indicates overbinding.}
-  \label{fig:rpa_basis}
+  \label{fig:def2-QZVP Error}
 \end{figure}
 
 \begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[scale=0.3]{tpss_1.png}
+    \includegraphics[scale=0.3]{tpss-1.png}
     \caption{RPA(TPSS)}
     \label{fig:tpss_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[scale=0.3]{tpssh_1.png}
+    \includegraphics[scale=0.3]{tpssh-1.png}
     \caption{RPA(TPSSh)}
     \label{fig:tpssh_1}
   \end{subfigure}
-  \caption{Basis sets convergence plot for RPA(TPSS)
-    and RPA(TPSSh) is presented for complex 1.}
+  \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
+    presented for complex 1. Complex 1 contains dispersion interaction
+    with fluorine.}
   \label{fig:complex_1}
 \end{figure}
 
 \begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpss_8.png}
+    \centering
+    \includegraphics[scale=0.3]{tpss-8.png}
     \caption{RPA(TPSS)}
     \label{fig:tpss_8}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpssh_8.png}
+    \centering
+    \includegraphics[scale=0.3]{tpssh-8.png}
     \caption{RPA(TPSSh)}
     \label{fig:tpssh_8}
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
-    presented for complex 8.}
+    presented for complex 8. Complex 8 contains induction interactions
+    with chlorine.}
   \label{fig:complex_8}
 \end{figure}
 
 \begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpss_11.png}
+    \centering
+    \includegraphics[scale=0.3]{tpss-11.png}
     \caption{RPA(TPSS)}
     \label{fig:tpss11}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpssh_11.png}
+    \centering
+    \includegraphics[scale=0.3]{tpssh-11.png}
     \caption{RPA(TPSSh)}
     \label{fig:tpssh_11}
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
-    presented for complex 11.}
+    presented for complex 11. Complex 11 contains stack interactions with
+    fluorine.}
   \label{fig:complex_11}
 \end{figure}
 
 \begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpss_24.png}
+    \centering
+    \includegraphics[scale=0.3]{tpss-24.png}
     \caption{RPA(TPSS)}
     \label{fig:tpss_24}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpssh_24.png}
+    \centering
+    \includegraphics[scale=0.3]{tpssh-24.png}
     \caption{RPA(TPSSh)}
     \label{fig:tpssh_24}
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
-    presented for complex 24.}
+    presented for complex 24. Complex 24 contains halogen bonding with
+    iodine.}
   \label{fig:complex_24}
 \end{figure}
 
 \begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpss_27.png}
+    \centering
+    \includegraphics[scale=0.3]{tpss-27.png}
     \caption{RPA(TPSS)}
     \label{fig:tpss_27}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpssh_27.png}
+    \centering
+    \includegraphics[scale=0.3]{tpssh-27.png}
     \caption{RPA(TPSSh)}
     \label{fig:tpssh_27}
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
-    presented for complex 27.}
+    presented for complex 27. Complex 27 contains halogen-pi bonding
+    with bromine.}
   \label{fig:complex_27}
 \end{figure}
 
 \begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpss_30.png}
+    \centering
+    \includegraphics[scale=0.3]{tpss-30.png}
     \caption{RPA(TPSS)}
     \label{fig:tpss_30}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpssh_30.png}
+    \centering
+    \includegraphics[scale=0.3]{tpssh-30.png}
     \caption{RPA(TPSSh)}
     \label{fig:tpssh_30}
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
-    presented for complex 30.}
+    presented for complex 30. Complex 30 contains halogen-pi bonding
+    with iodine.}
   \label{fig:complex_30}
 \end{figure}
 
 \begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpss_38.png}
+    \centering
+    \includegraphics[scale=0.3]{tpss-38.png}
     \caption{RPA(TPSS)}
     \label{fig:tpss_38}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
-    \center
-    \includegraphics[scale=0.3]{tpssh_38.png}
+    \centering
+    \includegraphics[scale=0.3]{tpssh-38.png}
     \caption{RPA(TPSSh)}
     \label{fig:tpssh_38}
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
-    presented for complex 38.}
+    presented for complex 38. Complex 38 contains hydrogen bonding with
+    chlorine.}
   \label{fig:complex_38}
 \end{figure}
 
