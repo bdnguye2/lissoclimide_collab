@@ -58,9 +58,6 @@
 
 \section{Introduction}
 
-\brian{Mention big picture -> lissoclimide project; follow-up to the
-  previous report}
-
 A potent cytotoxin, called chlorolissoclimide, was discovered
 in the sea squirt and could potentially be useful in cancer therapeutics
 or other pharmaceuticals, such as medication for COVID-19. This chemical
@@ -125,24 +122,21 @@ an error greater than the 3-4 extrapolated, 50 percent CP
 extrapolated, and cc-pVQZ. 
 
 \begin{table}[hbpt]
-  \caption{here is caption}
+  \caption{Statistical analysis of def2-QZVP, 3-4 Extrapolation, 50 3-4
+    Extrapolation, cc-pVTZ, and cc-pVQZ for the X40 test set. The mean
+    relative error (kcal/mol), mean absolute error (kcal/mol), and
+    standard deviation (kcal/mol). Negative sign indicates overbinding.}
   \centering
-  \begin{tabular}{c|cccc}
-       & col1 & col2 & col3 & col4 \\
+  \begin{tabular}{c|c|c|c|c|c}
+    & def2-QZVP & 3-4 Extrapolation & 50 3-4 Extrapolation & cc-pVTZ  &
+    cc-pVQZ \\
     \hline\hline
-    ME & blah & blah & blah & blah \\
-    MAE & blah & blah & blah & blah
+    Mean Error & 0.6031 & 0.3895 & 0.5981 & 0.8334 & 0.5768 \\
+    Mean Abs Error & 0.6161 & 0.4744 & 0.5980 & 0.8372 & 0.5807 \\
+    Standard Deviation & 0.4122 & 0.4044 & 0.3495 & 0.4783 & 0.3934 \\
   \end{tabular}
-  \label{tab:stuff}
+  \label{tab:table_1}
 \end{table}
-
-mean error
-def2-QZVP: 0.6030545998
-3-4 extrapolate: 0.3895447736
-50 percent 3-4 extrapolate: 0.5980591124
-cc-pVTZ: 0.8334508798
-cc-pVQZ: 0.5768176622
-
 
 \begin{figure}[H]
   \centering
@@ -193,8 +187,8 @@ RPA(TPSSh) also approaches a value that is more negative than RPA(TPSS).
   \label{fig:complex_8}
 \end{figure}
 
-The convergence plot for RPA(TPSS) all intersect before approaching 0
-whereas the plot for RPA(TPSSh) appears to converge. 
+The convergence plots for RPA(TPSS) and RPA(TPSSh) do not appear to
+converge. The 50 percent CP and 100 percent CP lines are nearly parallel.
 
 
 \begin{figure}[H]
@@ -335,21 +329,21 @@ appear to be parallel for the RPA(TPSS) and RPA(TPSSh) plots.
 
 \section{Conclusions}
 
-- def2-QZVP is a good balance between accuracy and efficiency ?
+After investigating the binding energy errors for the X40 test set,
+def2-QZVP is revealed to be a good balance between accuracy and
+efficiency. The mean error of def2-QZVP,0.603 kcal/mol, is between the
+mean error of cc-pVTZ, 0.833 kcal/mol, and cc-pVQZ, 0.576 kcal/mol.
+def2-QZVP yields good results compared to cc-pVTZ and cc-pVQZ since it
+does not have any CP to correct BSSE.
 
 Using TPSS and TPSSh functionals for RPA do not describe the different
-interactions better than PBE.
+interactions better than PBE. The seven complexes chosen based on error
+don't show any improvements because complexes 1, 8, 24, 27, 30, and 38
+did not converge. When compared to the results from the previous report,
+the error of the 3-4 extrapolation of RPA(TPSS) and RPA(TPSSh) were
+greater than the error of RPA(PBE). It is still recommended to use
+RPA(PBE) for noncovalent calculations.
 
-
-This section should answer the following questions:
-What is the significance of your results for the question, problem, or
-hypothesis posed in the introduction? What, if any, are the
-implications in the broader context of the research area laid out in the
-second paragraph of the introduction? 
-
-A second paragraph should discuss any conclusions for your future work. 
-Is there a need to change your approach or your priorities? What remains
-to be done to reach the goals stated in the first section? 
 
 \printbibliography
 
