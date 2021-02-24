@@ -58,25 +58,35 @@
 
 \section{Introduction}
 
-A potent cytotoxin, called chlorolissoclimide, was discovered
-in the sea squirt and could potentially be useful in cancer therapeutics
-or other pharmaceuticals, such as medication for COVID-19. This chemical
-induces cell death by obstructing production of proteins. An interesting
-ribosome-drug interaction was revealed to form a halogen-pi bond however,
-characteristics of the bond are still unknown. Halogen bonds are formed
-when a halogen interacts with other atoms within a molecule.Researching
-this specific interaction could help with creating new cancer therapeutic
-or improving medication.
+Cytotoxic natural products derived from the sea squirt can be useful in cancer
+therapeutics or other pharmaceuticals, such as medication
+for COVID-19. In cancer treatments, the cyotoxin called chlorolissoclimide induces cell death
+by inhibiting translation. Chlorolissoclimide binds to the 80S eukaryotic
+ribosome to obstruct the production of proteins. An interesting ribosome-drug
+interaction was revealed to form a halogen-$\pi$ bond however,
+characteristics of the bond are still unknown. These interactions fall in
+the category of halogen bonds. These bonds are noncovalent interactions that
+are formed when an electrophilic region of the halogen in a molecule interacts
+with a nucleophilic region within another molecule. It forms a $\sigma$-hole
+interaction. Research in this specific interaction could help with creating
+new cancer therapeutic or improving medication.
 
-Following up the previous report, random phase approximation (RPA) was
-chosen to be used with different functionals. The TPSS and TPSSh
-functionals may describe the halogen-pi bond more accurately than PBE.
-To investigate which functional performs better, the X40 test set serves
-as a benchmark for TPSS, TPSSh, and PBE calculations.
+Following up with the previous report, random phase approximation (RPA) was
+chosen to predict the halogen-$\pi$ interaction because RPA provides a
+systematic approach to treating long-range interactions albiet, it may
+not be as accurate with Grimme dispersion corrections for some cases. In addition to
+these conclusions, we investigated the use of different density functional
+approximations (DFAs) for RPA calculations, denoted as RPA(DFA).
+The TPSS and TPSSh functionals may describe the halogen-$\pi$ bond more accurately
+than PBE and investigated. To determine which functional performs better,
+the X40 test set serves as a benchmark for RPA(TPSS), RPA(TPSSh), and
+RPA(PBE) calculations. Moreover, the def2-QZVP basis sets were
+included to determine whether it may provide a balance between efficiency
+and accuracy.
 
 \section{Methods}
 
-Based on the previous report, the 3-4 extrapolation of the RIRPA
+Based on the previous report, the 3-4 extrapolation of the RPA
 correlation energy was a good balance between efficiency and accuracy.
 The X40 Test Set was used to benchmark the method's accuracy for 
 noncovalent interactions involving halogens. The test set contains 40
@@ -154,7 +164,7 @@ extrapolated, and cc-pVQZ.
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
     presented for complex 1. Dunning's basis sets were used for all atoms
-    and 1/X$^3$, where X is the cardinal number, was used for
+    and 1/X$^3$, where $X$ is the cardinal number, was used for
     extrapolation to form linear lines. Complex 1 contains dispersion
     interaction with fluorine.}
   \label{fig:complex_1}
@@ -181,7 +191,7 @@ RPA(TPSSh) also approaches a value that is more negative than RPA(TPSS).
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
     presented for complex 8. Dunning's basis sets were used for all atoms
-    and 1/X$^3$, where X is the cardinal number, was used for extrapolation
+    and 1/X$^3$, where $X$ is the cardinal number, was used for extrapolation
     to form linear lines. Complex 8 contains induction interactions with
     chlorine.}
   \label{fig:complex_8}
@@ -207,7 +217,7 @@ converge. The 50 percent CP and 100 percent CP lines are nearly parallel.
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
     presented for complex 11. Dunning's basis sets were used for all
-    atoms and 1/X3, where X is the cardinal number, was used for
+    atoms and $1/X^3$, where $X$ is the cardinal number, was used for
     extrapolation to form linear lines. Complex 11 contains stack
     interactions with fluorine.}
   \label{fig:complex_11}
@@ -234,7 +244,7 @@ appears to be negative while the energy for RPA(TPSSh) is positive.
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
     presented for complex 24. Dunning's basis sets were used for all
-    atoms and 1/X3, where X is the cardinal number, was used for
+    atoms and $1/X^3$, where $X$ is the cardinal number, was used for
     extrapolation to form linear lines. Complex 24 contains halogen 
     bonding with iodine.}
   \label{fig:complex_24}
@@ -260,8 +270,8 @@ The lines for both plots are parallel to each other as they approach 0.
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
     presented for complex 27. Dunning's basis sets were used for all
-    atoms and 1/X3, where X is the cardinal number, was used for
-    extrapolation to form linear lines. Complex 27 contains halogen-pi
+    atoms and $1/X^3$, where $X$ is the cardinal number, was used for
+    extrapolation to form linear lines. Complex 27 contains halogen-$\pi$
     bonding with bromine.}
   \label{fig:complex_27}
 \end{figure}
@@ -286,8 +296,8 @@ appear nearly parallel with each other.
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
     presented for complex 30. Dunning's basis sets were used for all
-    atoms and 1/X3, where X is the cardinal number, was used for
-    extrapolation to form linear lines. Complex 30 contains halogen-pi
+    atoms and $1/X^3$, where $X$ is the cardinal number, was used for
+    extrapolation to form linear lines. Complex 30 contains halogen-$\pi$
     bonding with iodine.}
   \label{fig:complex_30}
 \end{figure}
@@ -312,7 +322,7 @@ and 100 percent CP appear to be parallel.
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
     presented for complex 38. Dunning's basis sets were used for all
-    atoms and 1/X3, where X is the cardinal number, was used for
+    atoms and $1/X^3$, where $X$ is the cardinal number, was used for
     extrapolation to form linear lines. Complex 38 contains hydrogen
     bonding with chlorine.}
   \label{fig:complex_38}
@@ -321,11 +331,6 @@ and 100 percent CP appear to be parallel.
 The convergence plots both don't converge as the lines approach 0. The
 extrapolated line from cc-pVTZ to cc-pVQZ for RPA and 50 percent CP
 appear to be parallel for the RPA(TPSS) and RPA(TPSSh) plots.
-
-\brian{yada yada see Fig. \ref{fig:<name>}}
-
-
-
 
 \section{Conclusions}
 
