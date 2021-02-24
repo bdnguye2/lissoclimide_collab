@@ -72,8 +72,7 @@ Following up the previous report, random phase approximation (RPA) was
 chosen to be used with different functionals. The TPSS and TPSSh
 functionals may describe the halogen-pi bond more accurately than PBE.
 To investigate which functional performs better, the X40 test set serves
-as a benchmark for TPSS, TPSSh, and PBE calculations.  
-
+as a benchmark for TPSS, TPSSh, and PBE calculations.
 
 \section{Methods}
 
@@ -82,20 +81,21 @@ correlation energy was a good balance between efficiency and accuracy.
 The X40 Test Set was used to benchmark the method's accuracy for 
 noncovalent interactions involving halogens. The test set contains 40
 complexes with despersion, induction, dipole-dipole, stack, hydrogen
-bond, halogen bond, and halogen-pi bond interations.
+bond, halogen bond, and halogen-$\pi$ bond interations.
 
 To conserve time, a set of eight complexes from the X40 test set were
 chosen based on error from the previous report to study basis set
-convergences. Calculations were computed with basis sets def2-QZVP,
-cc-pVTZ, and cc-pVQZ. The RPA energies were computed based on converged
-orbitals from TPSS and TPSSh and resolution of identity (RI) was included
-to improve efficiency. The Hartree Exact Exchange (HXX) total energy and
-RIRPA correlation energy were recorded from the supermolecule and
-monomers of each complex to compute interaction energies. The interaction
-energies from the selected complexes were extrapolated using the
-supramolecular approach. Due to the basis set superposition error (BSSE),
-counterpoise corrections (CP) were applied to the RIRPA correlation
-energy as well.
+convergences. A comparison of density functionals was done between
+PBE, TPSS, and TPSSh. All calculations were computed with basis sets def2-QZVP,
+cc-pVTZ, and cc-pVQZ to compare effects of the basis sets. Within the frozen core approximation,
+the RPA energies were computed based on converged orbitals from TPSS and TPSSh, and
+resolution-of-identity (RI) was included to improve efficiency. The Hartree
+Exact Exchange (HXX) total energy and RIRPA correlation energy were
+recorded from the supermolecule and monomers of each complex to compute
+interaction energies. The interaction energies from the selected complexes
+were extrapolated using the supramolecular approach. Due to the basis set
+superposition error (BSSE), 50$\%$ counterpoise corrections (CP) were
+applied to the RIRPA correlation energy as well.
 
 \section{Results}
 
