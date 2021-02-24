@@ -105,11 +105,14 @@ recorded from the supermolecule and monomers of each complex to compute
 interaction energies. The interaction energies from the selected complexes
 were extrapolated using the supramolecular approach. Due to the basis set
 superposition error (BSSE), 50$\%$ counterpoise corrections (CP) were
-applied to the RIRPA correlation energy as well.
+applied to the RIRPA correlation energy as well. Statistical analysis
+is provided.
 
 \section{Results}
 
-\begin{figure}[H]
+\subsection{Differences in Basis Sets}
+
+\begin{figure}[hbpt]
   \centering
   \begin{subfigure}{\textwidth}
     \center
@@ -127,9 +130,14 @@ applied to the RIRPA correlation energy as well.
   \label{fig:def2-QZVP Error}
 \end{figure}
 
-For most complexes, the method using the def2-QZVP basis function yields
-an error greater than the 3-4 extrapolated, 50 percent CP
-extrapolated, and cc-pVQZ. 
+For most complexes in Fig. \ref{fig:def2-QZVP Error}, the method using
+the def2-QZVP basis function yields an error greater than the 3-4 extrapolated,
+50$\%$ CP 3-4 extrapolated, and cc-pVQZ. The mean absolute error (MAE) for
+def2-QZVP is the second largest with 0.6161 kcal/mol and the cc-pVTZ is the
+largest MAE with 0.8372 kcal/mol indicated in Tab. \ref{tab:table_1}. The
+large MAE for cc-pVTZ is attributed to large BSSE. The 3-4 extrapolation
+of RPA is the most appropriate to achieve complete basis set (CBS) limit
+crucial for computing noncovalent interactions.
 
 \begin{table}[hbpt]
   \caption{Statistical analysis of def2-QZVP, 3-4 Extrapolation, 50$\%$ 3-4
@@ -148,6 +156,21 @@ extrapolated, and cc-pVQZ.
   \label{tab:table_1}
 \end{table}
 
+\subsection{Accuracy of Different DFAs for RPA}
+
+\begin{table}[hbpt]
+  \centering
+  \caption{\brian{Thanh add the error table for RPA(PBE), RPA(TPSS), and
+      RPA(TPSSh). Preferably the 50$\%$ CP 3-4 extrapolated}}
+  \begin{tabular}{c}
+  \end{tabular}
+  \label{tab:errors_RPA(DFA)}
+\end{table}
+
+\brian{blah blah RPA(PBE) errors compared to...}
+
+\subsection{RPA(TPSS) and RPA(TPSSh) Basis Sets Convergences}
+
 \begin{figure}[H]
   \centering
   \begin{subfigure}{.5\textwidth}
@@ -164,16 +187,22 @@ extrapolated, and cc-pVQZ.
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
     presented for complex 1. Dunning's basis sets were used for all atoms
-    and 1/X$^3$, where $X$ is the cardinal number, was used for
+    and $1/X^3$, where $X$ is the cardinal number, was used for
     extrapolation to form linear lines. Complex 1 contains dispersion
     interaction with fluorine.}
   \label{fig:complex_1}
 \end{figure}
 
-The convergence plot for RPA(TPSS) and RPA(TPSSh) both don't appear to be
-converging since the extrapolated lines are nearly parallel. The plot for
-RPA(TPSSh) also approaches a value that is more negative than RPA(TPSS).
-
+In Fig. \ref{fig:complex_1}, the convergence plot for RPA(TPSS) and
+RPA(TPSSh) both don't appear to be converging since the extrapolated
+lines are nearly parallel. The plot for RPA(TPSSh) also approaches a
+value that is more negative than RPA(TPSS). In the previous report,
+RPA(PBE) suggested that the complex 1 do not bind similar to the
+RPA(TPSS). Only the RPA(TPSSh) indicates a weakly bounded complex
+with 0.180 kcal/mol and this is an underestimation compared to
+CCSD(T) with binding energy of 0.491 kcal/mol. The issue may due to
+the MP2 geometry optimization of X40 complexes and interpolation of
+the intermolecular distances using CCSD(T).
 
 \begin{figure}[H]
   \centering
@@ -191,17 +220,19 @@ RPA(TPSSh) also approaches a value that is more negative than RPA(TPSS).
   \end{subfigure}
   \caption{Basis sets convergence plot for RPA(TPSS) and RPA(TPSSh) is
     presented for complex 8. Dunning's basis sets were used for all atoms
-    and 1/X$^3$, where $X$ is the cardinal number, was used for extrapolation
+    and $1/X^3$, where $X$ is the cardinal number, was used for extrapolation
     to form linear lines. Complex 8 contains induction interactions with
     chlorine.}
   \label{fig:complex_8}
 \end{figure}
 
-The convergence plots for RPA(TPSS) and RPA(TPSSh) do not appear to
-converge. The 50 percent CP and 100 percent CP lines are nearly parallel.
+In Fig. \ref{fig:complex_8}, the convergence plots for RPA(TPSS)
+and RPA(TPSSh) do not appear to converge. The 50$\%$ CP and 100$\%$ CP
+lines are nearly parallel. RPA(TPSS) and RPA(TPSSh) underbinds with
+binding energies of 0.824 kcal/mol and 0.804 kcal/mol compared to CCSD(T)
+with binding energy of 1.146 kcal/mol.
 
-
-\begin{figure}[H]
+\begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
@@ -224,9 +255,9 @@ converge. The 50 percent CP and 100 percent CP lines are nearly parallel.
 \end{figure}
 
 Both the RPA(TPSS) and RPA(TPSSh) plots for complex 11 are converging
-to one value as they approach 0. The interaction energy for RPA(TPSS)
-appears to be negative while the energy for RPA(TPSSh) is positive.
-
+to one value as they approach 0 in Fig. \ref{fig:complex_11}. The
+interaction energy for RPA(TPSS) appears to bind while the energy
+for RPA(TPSSh) suggest that complex do not bind.
 
 \begin{figure}[H]
   \centering
@@ -250,11 +281,16 @@ appears to be negative while the energy for RPA(TPSSh) is positive.
   \label{fig:complex_24}
 \end{figure}
 
+The complexes containing iodine yield similar basis sets convergences
+as compared to the RPA(PBE) in the previous report. Pseudo-potentials
+for the iodine atom may attributed to this non-convergent behavior.
 For complex 24, both RPA(TPSS) and RPA(TPSSh) do not converge at all.
 The lines for both plots are parallel to each other as they approach 0.
+However, the binding errors for RPA(TPSS) and RPA(TPSSh) are 0.367 kcal/mol
+and 0.236 kcal/mol, respectively. The RPA(PBE) method yields a binding
+error of 0.282 kcal/mol. 
 
-
-\begin{figure}[H]
+\begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
@@ -276,11 +312,14 @@ The lines for both plots are parallel to each other as they approach 0.
   \label{fig:complex_27}
 \end{figure}
 
-The RPA(TPSS) and RPA(TPSSh) convergence plots look similar and both don't
-converge to one point. The extrapolated lines from cc-pVTZ to cc-pVQZ
-appear nearly parallel with each other.
+Similarly, in Fig. \ref{fig:complex_27}, the RPA(TPSS) and RPA(TPSSh)
+convergence plots appear to not converge to one point. The extrapolated
+lines from cc-pVTZ to cc-pVQZ appear nearly parallel with each other.
+Meanwhile, the binding energy errors for RPA(PBE), RPA(TPSS), and
+RPA(TPSSh) are 0.499 kcal/mol, 0.517 kcal/mol, and 0.530 kcal/mol,
+respectively.
 
-\begin{figure}[H]
+\begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
@@ -302,11 +341,13 @@ appear nearly parallel with each other.
   \label{fig:complex_30}
 \end{figure}
 
-The convergence plot for RPA(TPSS) and RPA(TPSSh) both do not converge
-as the extrapolated lines approach 0. The lines for RPA, 50 percent CP,
-and 100 percent CP appear to be parallel.
+Lastly, the complex 30 convergence plot for RPA(TPSS) and RPA(TPSSh) both
+do not converge as the extrapolated lines approach 0. The lines for 0$\%$,
+50$\%$ CP, and 100$\%$ CP appear to be parallel. The errors for RPA(PBE),
+RPA(TPSS), and RPA(TPSSh) are 0.097 kcal/mol, 0.150 kcal/mol, and 0.120
+kcal/mol, respectively.
 
-\begin{figure}[H]
+\begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
@@ -328,9 +369,11 @@ and 100 percent CP appear to be parallel.
   \label{fig:complex_38}
 \end{figure}
 
-The convergence plots both don't converge as the lines approach 0. The
-extrapolated line from cc-pVTZ to cc-pVQZ for RPA and 50 percent CP
-appear to be parallel for the RPA(TPSS) and RPA(TPSSh) plots.
+Convergences for chlorinated complexes appear to quickly converge and
+complex 38 is not exception shown in Fig. \ref{fig:complex_38}. Both
+RPA(TPSS) and RPA(TPSSh) yield similar binding energies of 9.768 kcal/mol
+and 10.062 kcal/mol. Hence, the errors are very different for RPA(TPSS)
+and RPA(TPSSh) which are 1.650 kcal/mol and 1.357 kcal/mol, respectively.
 
 \section{Conclusions}
 
