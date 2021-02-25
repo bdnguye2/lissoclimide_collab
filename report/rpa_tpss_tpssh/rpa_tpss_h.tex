@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Preamble
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[11pt]{article}
@@ -160,14 +160,22 @@ crucial for computing noncovalent interactions.
 
 \begin{table}[hbpt]
   \centering
-  \caption{\brian{Thanh add the error table for RPA(PBE), RPA(TPSS), and
-      RPA(TPSSh). Preferably the 50$\%$ CP 3-4 extrapolated}}
-  \begin{tabular}{c}
+  \caption{Statistical analysis of the error for the 50$\%$ CP 3-4
+    extrapolation of RPA(PBE), RPA(TPSS), and RPA(TPSSh). The mean relative
+    error (ME) in kcal/mol, mean absolute error (MAE) in kcal/mol, and
+    standard deviation (STD) in kcal/mol.}
+  \begin{tabular}{c|c|c|c}
+    & RPA(PBE) & RPA(TPSS) & RPA(TPSSh) \\
+    \hline\hline
+    ME & 0.560 & 0.590 & 2.717 \\
+    MAE & 0.560 & 0.590 & 2.717 \\
+    STD & 0.497 & 0.494 & 5.92 \\
   \end{tabular}
   \label{tab:errors_RPA(DFA)}
 \end{table}
-
-\brian{blah blah RPA(PBE) errors compared to...}
+The error for the RPA(PBE) method compared to RPA(TPSS) and RPA(TPSSh) is
+smaller for ME, MAE, and STD. The error for RPA(TPSSh) is much larger than
+the other two methods.
 
 \subsection{RPA(TPSS) and RPA(TPSSh) Basis Sets Convergences}
 
