@@ -24,7 +24,7 @@
 \usepackage{hyperref}
 %
 % Bibliography
-\usepackage[style=numeric, sorting=none, backend=biber]{biblatex}
+\usepackage[style=chem-acs, sorting=none, backend=biber]{biblatex}
 \addbibresource{references.bib}
 %
 % Revision (see Makefile)
@@ -59,16 +59,18 @@
 
 Cytotoxic natural products derived from the sea squirt can be useful in cancer
 therapeutics or other pharmaceuticals, such as medication
-for COVID-19. In cancer treatments, the cyotoxin called chlorolissoclimide induces cell death
-by inhibiting translation. Chlorolissoclimide binds to the 80S eukaryotic
+for COVID-19.\autocite{White926,Könst.Szklarski:Translation-inhibition-lissoclimides.NCAH.17}
+In cancer treatments, the cyotoxin called chlorolissoclimide induces cell death
+by inhibiting translation.\autocite{Könst.Szklarski:Translation-inhibition-lissoclimides.NCAH.17}
+Chlorolissoclimide binds to the 80S eukaryotic
 ribosome to obstruct the production of proteins. An interesting ribosome-drug
 interaction was revealed to form a halogen-$\pi$ bond however,
 characteristics of the bond are still unknown. These interactions fall in
 the category of halogen bonds. These bonds are noncovalent interactions that
 are formed when an electrophilic region of the halogen in a molecule interacts
 with a nucleophilic region within another molecule. It forms a $\sigma$-hole
-interaction. Research in this specific interaction could help with creating
-new cancer therapeutic or improving medication.
+interaction.\autocite{doi:10.1021/acs.chemrev.5b00484} Research in this specific
+interaction could help with creating new cancer therapeutic or improving medication.
 
 Following up with the previous report, random phase approximation (RPA) was
 chosen to predict the halogen-$\pi$ interaction because RPA provides a
@@ -76,11 +78,13 @@ systematic approach to treating long-range interactions albiet, it may
 not be as accurate with Grimme dispersion corrections for some cases. In addition to
 these conclusions, we investigated the use of different density functional
 approximations (DFAs) for RPA calculations, denoted as RPA(DFA).
-The TPSS and TPSSh functionals may describe the halogen-$\pi$ bond more accurately
+The TPSS and TPSSh functionals\autocite{Tao.Perdew:Nonempirical-Meta-GGA.PRLT.03,
+  doi:10.1063/1.1665298}
+may describe the halogen-$\pi$ bond more accurately
 than PBE and investigated. To determine which functional performs better,
 the X40 test set serves as a benchmark for RPA(TPSS), RPA(TPSSh), and
-RPA(PBE) calculations. Moreover, the def2-QZVP basis sets were
-included to determine whether it may provide a balance between efficiency
+RPA(PBE) calculations. Moreover, the def2-QZVP basis sets\autocite{Weigend.Ahlrichs:Balanced-basis-sets.PPCP.05}
+were included to determine whether it may provide a balance between efficiency
 and accuracy.
 
 \section{Methods}
@@ -95,8 +99,11 @@ bond, halogen bond, and halogen-$\pi$ bond interations.
 To conserve time, a set of eight complexes from the X40 test set were
 chosen based on error from the previous report to study basis set
 convergences. A comparison of density functionals was done between
-PBE, TPSS, and TPSSh. All calculations were computed with basis sets def2-QZVP,
-cc-pVTZ, and cc-pVQZ to compare effects of the basis sets. Within the frozen core approximation,
+PBE, TPSS, and TPSSh.\autocite{Perdew.Burke:GGA-Made-Simple.PRLT.96,
+  Tao.Perdew:Nonempirical-Meta-GGA.PRLT.03,doi:10.1063/1.1665298} All calculations
+were computed with basis sets def2-QZVP,\autocite{Weigend.Ahlrichs:Balanced-basis-sets.PPCP.05}
+cc-pVTZ, and cc-pVQZ\autocite{Dunning:Gaussian-basis-correlated.JCPS.89} to
+compare effects of the basis sets. Within the frozen core approximation,
 the RPA energies were computed based on converged orbitals from TPSS and TPSSh, and
 resolution-of-identity (RI) was included to improve efficiency. The Hartree
 Exact Exchange (HXX) total energy and RIRPA correlation energy were
