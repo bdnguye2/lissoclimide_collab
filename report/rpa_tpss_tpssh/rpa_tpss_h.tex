@@ -1,4 +1,4 @@
-1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Preamble
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[11pt]{article}
@@ -31,7 +31,7 @@
 %\input{revision.tex}
 %
 % Definitions and settings
-% Paragraph indent and spacing
+% Paragraph indent and spacing 
 \setlength{\parskip}{0.4\baselineskip}
 \setlength{\parindent}{0in}
 %
@@ -53,7 +53,6 @@
 %
 
 \begin{document}
-
 \maketitle
 
 \section{Introduction}
@@ -167,19 +166,19 @@ crucial for computing noncovalent interactions.
   \begin{tabular}{c|c|c|c}
     & RPA(PBE) & RPA(TPSS) & RPA(TPSSh) \\
     \hline\hline
-    ME & 0.560 & 0.590 & 2.717 \\
-    MAE & 0.560 & 0.590 & 2.717 \\
-    STD & 0.497 & 0.494 & 5.92 \\
+    ME & 0.560 & 0.590  & 0.506 \\
+    MAE & 0.560 & 0.590 & 0.506 \\
+    STD & 0.497 & 0.494 & 0.414 \\
   \end{tabular}
   \label{tab:errors_RPA(DFA)}
 \end{table}
-The error for the RPA(PBE) method compared to RPA(TPSS) and RPA(TPSSh) is
-smaller for ME, MAE, and STD. The error for RPA(TPSSh) is much larger than
-the other two methods.
+In Tab. \ref{tab:errors_RPA(DFA)}, the error for the RPA(PBE) method is
+comparable to RPA(TPSS) and RPA(TPSSh). This suggests that there is
+minor functional dependency for RPA calculations.
 
 \subsection{RPA(TPSS) and RPA(TPSSh) Basis Sets Convergences}
 
-\begin{figure}[H]
+\begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
@@ -212,7 +211,7 @@ CCSD(T) with binding energy of 0.491 kcal/mol. The issue may due to
 the MP2 geometry optimization of X40 complexes and interpolation of
 the intermolecular distances using CCSD(T).
 
-\begin{figure}[H]
+\begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
@@ -250,7 +249,7 @@ with binding energy of 1.146 kcal/mol.
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
-    \includegraphics[scale=0.3]{tpssh-11.png}
+    \includegraphics[scale=0.18]{tpssh-11.png}
     \caption{RPA(TPSSh)}
     \label{fig:tpssh_11}
   \end{subfigure}
@@ -264,10 +263,10 @@ with binding energy of 1.146 kcal/mol.
 
 Both the RPA(TPSS) and RPA(TPSSh) plots for complex 11 are converging
 to one value as they approach 0 in Fig. \ref{fig:complex_11}. The
-interaction energy for RPA(TPSS) appears to bind while the energy
-for RPA(TPSSh) suggest that complex do not bind.
+interaction energy for RPA(TPSS) and RPA(TPSSh) appears to converge to
+a similar value within 0.02 kcal/mol.
 
-\begin{figure}[H]
+\begin{figure}[hbpt]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
@@ -396,9 +395,9 @@ Using TPSS and TPSSh functionals for RPA do not describe the different
 interactions better than PBE. The seven complexes chosen based on error
 don't show any improvements because complexes 1, 8, 24, 27, 30, and 38
 did not converge. When compared to the results from the previous report,
-the error of the 3-4 extrapolation of RPA(TPSS) and RPA(TPSSh) were
-greater than the error of RPA(PBE). It is still recommended to use
-RPA(PBE) for noncovalent calculations.
+the error of the 50$\%$ CP 3-4 extrapolation of RPA(TPSS) and RPA(TPSSh) were
+similar to the error of RPA(PBE). Regardless of the functional choice,
+RPA can provide consistently accurate results for the halogenated complexes.
 
 
 \printbibliography
