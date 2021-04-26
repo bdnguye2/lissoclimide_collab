@@ -1,0 +1,159 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+%
+% Packages and other includes
+% Pagination
+\usepackage[letterpaper, margin=1.25in]{geometry}
+%
+% Fonts
+\usepackage[T1]{fontenc} % best for Western European languages
+\usepackage{lmodern} % Latin Modern instead of CM
+\usepackage{textcomp} % required to get special symbols
+%
+% Math
+\usepackage{amsmath, amssymb}
+\usepackage{braket}
+%
+% Graphics, floats, tables
+\usepackage{graphicx, color, float, array}
+%
+% Hyperlinks
+\usepackage{hyperref}
+%
+% Bibliography
+\usepackage[style=numeric, sorting=none, backend=biber]{biblatex}
+\addbibresource{references.bib}
+%
+% Revision (see Makefile)
+%\input{revision.tex}
+%
+% Definitions and settings
+% Paragraph indent and spacing
+\setlength{\parskip}{0.4\baselineskip}
+\setlength{\parindent}{0in}
+%
+% Math mode version of "r" column type (requires array package)
+\newcolumntype{R}{>{$}r<{$}}
+%
+% Title, authors, date
+\title{\textbf{Research Report}}
+\author{YOUR NAME}
+\date{MM/DD/YYYY -- MM/DD/YYYY }
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+The first paragraph provides broad context and motivation for your
+report. It should establish a connection to your and the group's scientific
+long-term goals, and avoid lofty or vague statements. Popularity,
+recent public attention, or the observation that ``our group is
+interested in A, B and C'' etc. are insufficient motivations. You may
+re-use parts of this paragraph from previous reports, taking into
+consideration feedback you received. 
+
+The second paragraph also provides context, but much more focused on
+your research. For example, you may explain in the first paragraph why
+solvation effects are important for chemists, and then give a brief
+overview of work on excited state properties in the area of implicit
+solvent models. The purpose of this paragraph is to help the reader
+understand what prior work was done, and to provide the ``background
+scenery'' for the work you are reporting. 
+
+The third paragraph should explain how your work goes beyond existing
+methods or results, and define its specific goals and
+hypotheses. It is better to focus on what your work aims to do than on
+what you and others before you were not able to do. 
+
+While your report should efficiently communicate any recent results you
+have had, it also serves to help you gauge your progress, see the
+conclusions and broader context of your work, assess priorities,
+generate narratives for later use in publications, and sharpen your
+writing skills. Even if you spend the entire period of your report
+debugging code, your report can help re-state the problem, discuss
+strategies you employed to find the error and whether your time was well
+used. You might also conclude, e.g., that you need additional resources
+and help to tackle the problem, or that it may not be worth pursuing
+further. 
+
+The entire report should be written in scientific English suitable for
+publication, see \textcite{Strunk99} for an introduction. Try to be
+concise, clear, and articulate at the same time. Bullet points,
+unexplained abbreviations, incomplete sentences, or slang are not
+acceptable. References should be cited using the group's refbase cite
+keys. Ensure that all symbols are defined, and figures and tables
+are clear and have self-contained captions. For instructions on how to
+best display quantitative information in figures, refer to
+\textcite{Tufte01}. Use 
+vector graphics (eps or pdf) when possible and appropriate, otherwise
+600 dpi bitmap (png, jpeg). The report should be between 2 and 4 pages
+long, including references.
+
+If you are working on more than one different projects simultaneously,
+you may alternate your biweekly reports over a longer period of
+time.
+
+In addition to attaching an electronic version of your report to your
+meeting agenda, please print it (two-sided) and submit a paper copy to
+Filipp's office by 5:00 pm on the day before your meeting (you may slide
+it under the door if necessary). 
+
+\section{Methods}
+
+The methods section should concisely state the methods you used to
+obtain your results. For a theoretical project, this section will
+review key assumptions and equations; for an implementation-centered
+project, the main working equations and implementation strategies will
+be stated here; for a computational project, this section will contain
+the computational details. Depending on the subject, parts of this
+section may be carried over from previous reports.
+
+\section{Results}
+
+This section states the main new results of the current
+reporting period. These results could be presented, e.g., in the form of
+equations, figures, tables, and text. Negative results are just as
+important as positive ones and should be carefully reported. Use a
+balanced tone avoiding over- and understatement. 
+
+Sometimes, it is helpful to separate statement of the results and
+discussion, although a strict separation of the two is often
+impossible. A separate discussion section may be appropriate if you are
+proposing a speculative rationale or if several interpretations of your
+results are possible. If you have no new results at all, this is the
+place to explain why. 
+
+\section{Conclusions}
+
+
+This section should answer the following questions:
+What is the significance of your results for the question, problem, or
+hypothesis posed in the introduction? What, if any, are the
+implications in the broader context of the research area laid out in the
+second paragraph of the introduction? 
+
+A second paragraph should discuss any conclusions for your future work. 
+Is there a need to change your approach or your priorities? What remains
+to be done to reach the goals stated in the first section? 
+
+\section{Service}
+
+This section should summarize group service activities you have engaged
+in during the reporting period, including, e.g., related to shared
+governance (deputy positions), work for the high school outreach
+program, helping or supervising other group members to larger extent
+than usual.
+
+\printbibliography
+
+\end{document}
